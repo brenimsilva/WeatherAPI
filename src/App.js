@@ -5,6 +5,12 @@ import Card from "./components/Card";
 import Forecast from "./components/forecast/Forecast";
 import Details from "./components/forecast/Details";
 import Section from "./components/forecast/Section";
+import img1 from "./imgs/d02.png";
+import img2 from "./imgs/d01.png";
+import img3 from "./imgs/r01.png";
+import img4 from "./imgs/r02.png";
+import img5 from "./imgs/n02.png";
+import img6 from "./imgs/n01.png";
 
 //
 function App() {
@@ -17,31 +23,31 @@ function App() {
     if (time >= 6 && time <= 18) {
       switch (description) {
         case "Clouds":
-          setImg("../imgs/d02.png");
+          setImg(img1);
           break;
         case "Clear":
-          setImg("../imgs/d01.png");
+          setImg(img2);
           break;
         case "Rain":
-          setImg("../imgs/r01.png");
+          setImg(img3);
           break;
         case "Extreme":
-          setImg("../imgs/r02.png");
+          setImg(img4);
           break;
       }
     } else {
       switch (description) {
         case "Clouds":
-          setImg("../imgs/n02.png");
+          setImg(img5);
           break;
         case "Clear":
-          setImg("../imgs/n01.png");
+          setImg(img6);
           break;
         case "Rain":
-          setImg("../imgs/r01.png");
+          setImg(img3);
           break;
         case "Extreme":
-          setImg("../imgs/r02.png");
+          setImg(img4);
           break;
       }
     }

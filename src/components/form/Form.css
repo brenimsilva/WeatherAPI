@@ -1,0 +1,46 @@
+form {
+  margin-top: 35px;
+}
+
+input {
+  margin-left: 50%;
+  margin: 25px 0px 0px 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: white;
+  border-style: none;
+  border: 1px solid rgba(41, 93, 238, 0.596);
+  color: black;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.432);
+}
+
+input:focus {
+  border-style: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 12px;
+  border: none;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(21, 17, 252);
+  margin-top: 5px;
+  cursor: pointer;
+  width: 100px;
+  transition: color 0.5s ease;
+}
+
+button:hover {
+  background-color: rgb(83, 81, 240);
+  color: #fff;
+}

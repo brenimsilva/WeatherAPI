@@ -1,0 +1,84 @@
+.forecast {
+  transition: all 0.5s ease;
+}
+
+p {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.603);
+}
+
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  display: none;
+  transition: opacity 300ms linear;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.weather_div {
+  position: relative;
+  inset: 0;
+  margin: auto;
+  width: 150px;
+  height: 100px;
+}
+
+.weather_img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 145px;
+  filter: drop-shadow(18px 10px 20px rgba(0, 0, 0, 0.274))
+    drop-shadow(-6px -6px 20px rgba(255, 255, 255, 0.548));
+}
+
+.temp_h1 {
+  filter: drop-shadow(1px 1px 10px rgba(255, 255, 255, 0.493));
+  font-size: 80px;
+  padding: 0;
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+
+.city_name {
+  font-size: 20px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.location_icon {
+  display: inline-block;
+}
+
+.description {
+  margin: 0px 0 5px 0;
+}
+
+.date {
+  margin: 0px;
+  padding: 0;
+}

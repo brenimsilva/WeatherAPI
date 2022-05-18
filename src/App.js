@@ -1,57 +1,20 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./components/form/Form";
 import Card from "./components/Card";
 import Forecast from "./components/forecast/Forecast";
 import Details from "./components/forecast/Details";
 import Section from "./components/forecast/Section";
-import img1 from "./imgs/d02.png";
-import img2 from "./imgs/d01.png";
-import img3 from "./imgs/r01.png";
-import img4 from "./imgs/r02.png";
-import img5 from "./imgs/n02.png";
-import img6 from "./imgs/n01.png";
+import Image from "./components/forecast/Image";
 import Coord from "./components/Coord";
 
 //
 function App() {
-  const date = new Date();
-  const time = date.getHours();
   const [weather, setWeather] = useState([]);
   const [img, setImg] = useState("");
 
-  function changeWeatherImage(description) {
-    if (time >= 6 && time <= 18) {
-      switch (description) {
-        case "Clouds":
-          setImg(img1);
-          break;
-        case "Clear":
-          setImg(img2);
-          break;
-        case "Rain":
-          setImg(img3);
-          break;
-        case "Extreme":
-          setImg(img4);
-          break;
-      }
-    } else {
-      switch (description) {
-        case "Clouds":
-          setImg(img5);
-          break;
-        case "Clear":
-          setImg(img6);
-          break;
-        case "Rain":
-          setImg(img3);
-          break;
-        case "Extreme":
-          setImg(img4);
-          break;
-      }
-    }
+  function changeWeatherImage(image) {
+    setImg(image);
   }
 
   function fetchWeatherData(city) {
@@ -76,12 +39,18 @@ function App() {
           {!weather.main ? (
             <Forecast cityName="Cidade" temperature="" description="---" />
           ) : (
-            <Forecast
-              cityName={weather.name}
-              temperature={Math.round(weather.main.temp) + "°"}
-              description={weather.weather[0].main}
-              img={img}
-            />
+            <React.Fragment>
+              <Image
+                onChangeImage={changeWeatherImage}
+                description={weather.weather[0].main}
+              />
+              <Forecast
+                cityName={weather.name}
+                temperature={Math.round(weather.main.temp) + "°"}
+                description={weather.weather[0].main}
+                img={img}
+              />
+            </React.Fragment>
           )}
           <hr />
           {!weather.main ? (

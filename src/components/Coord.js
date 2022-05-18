@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "styled-components";
+
 
 const CoordButton = styles.input`
 color: white;
@@ -20,10 +21,7 @@ const CoordDiv = styles.div`
 display: flex;
 justify-content: center`;
 
-//API DATA
-
 export default function Coord(props) {
-
   const getCoord = function () {
     return new Promise(function (resolve, reject) {
       navigator.geolocation.getCurrentPosition(

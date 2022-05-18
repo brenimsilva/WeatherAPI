@@ -12,7 +12,6 @@ export default function Form(props) {
     setUserInput("");
   }
 
-  const top100Films = ["oi", "ok", "ta", "sim"];
   return (
     <div>
       <form onSubmit={submitForm}>

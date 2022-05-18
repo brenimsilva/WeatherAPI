@@ -11,6 +11,7 @@ import img3 from "./imgs/r01.png";
 import img4 from "./imgs/r02.png";
 import img5 from "./imgs/n02.png";
 import img6 from "./imgs/n01.png";
+import Coord from "./components/Coord";
 
 //
 function App() {
@@ -94,6 +95,7 @@ function App() {
         </Section>
         <Form onSaveForm={saveFormCity} />
       </Card>
+      <Coord />
     </div>
   );
 }

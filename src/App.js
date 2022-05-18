@@ -95,7 +95,7 @@ function App() {
         </Section>
         <Form onSaveForm={saveFormCity} />
       </Card>
-      <Coord />
+      <Coord onGetCoords={saveFormCity}/>
     </div>
   );
 }

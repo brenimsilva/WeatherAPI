@@ -22,7 +22,6 @@ function App() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-         console.log(data);
         setWeather(data);
         changeWeatherImage(data.weather[0].main);
       });

@@ -18,6 +18,4 @@ describe("Testing App Component", () => {
     const outputElement = await screen.getByText("Cidade", { exact: false });
     expect(outputElement).toBeInTheDocument();
   });
-
-  test("Test if user clicks on my location", () => {});
 });
